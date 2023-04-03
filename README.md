@@ -1,6 +1,6 @@
 # spell-walker
 ## We love casting spells
-  Chapter 8 benchmark project for Rust documentation learning
+  Chapter 8 benchmark project for Rust documentation learning. Want to test my grasp on collections, structs, module organization among others
 
 ## Todo
   1. Inventory / Backpack transactions  
