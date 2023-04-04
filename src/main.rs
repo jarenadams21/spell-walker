@@ -1,7 +1,7 @@
-use std::collections::HashMap;
 use std::io;
 use app::spell_workbench;
 use app::create_wizard;
+use app::create_backpack;
 
 fn main() {
 
@@ -10,7 +10,12 @@ fn main() {
    /* Last user action */
    let mut selection = String::new();
 
+   let mut backpack = create_backpack("PACKPANTHR".to_string());
+   backpack.add("Boots".to_string(), 1);
+   backpack.print_bag();
+
    println!("\nHi {} Welcome to backpacking!\n", user.get_name());
+   println!("You have been equipped with a basic set of boots to get started on your journey! Good luck!\n");
 
    /* Program */
    'main_program: loop {
