@@ -4,10 +4,11 @@
 
 ## Todo
   1. Inventory / Backpack transactions
-    [ X ] Insertions
-    [ ] Deletions
-    [ ] Updates/increasing count  
-    [ ] Conveniency functionality (getters,setters,etc.)
+    
+        [ X ] Insertions
+        [ ] Deletions
+        [ ] Updates/increasing count  
+        [ ] Conveniency functionality (getters,setters,etc.)
   2. Combine metrics, view eqiupment, etc. into one "view yourself"
 
 ## Instructions
