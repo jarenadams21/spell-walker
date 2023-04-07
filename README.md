@@ -5,9 +5,9 @@
 ## Todo
   1. Inventory / Backpack transactions
     
-      FIRST: Code Organization
-      SECOND: FIX SpellPack Hashmap
-      THEN:
+      FIRST: Code Organization, 
+      SECOND: FIX SpellPack Hashmap and Spell struct to store names in Spells and map Spells to i32 values, 
+      THEN: Fix the code that does not work
     
         [ X ] Insertions
         [ ] Deletions
