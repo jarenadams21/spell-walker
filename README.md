@@ -9,6 +9,8 @@
         [ ] Deletions
         [ ] Updates/increasing count  
         [ ] Conveniency functionality (getters,setters,etc.)
+        [ ] Finish Craft a Spell view
+  
   2. Combine metrics, view eqiupment, etc. into one "view yourself"
 
 ## Instructions

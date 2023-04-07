@@ -1,3 +1,4 @@
+
 // User structure formation capabilities
 pub mod user_construction {
 
