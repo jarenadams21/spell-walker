@@ -6,6 +6,8 @@
   1. Inventory / Backpack transactions
     
       FIRST: Code Organization
+      SECOND: FIX SpellPack Hashmap
+      THEN:
     
         [ X ] Insertions
         [ ] Deletions
