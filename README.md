@@ -5,6 +5,8 @@
 ## Todo
   1. Inventory / Backpack transactions
     
+      FIRST: Code Organization
+    
         [ X ] Insertions
         [ ] Deletions
         [ ] Updates/increasing count  
