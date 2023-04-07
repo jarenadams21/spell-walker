@@ -16,16 +16,20 @@ fn main() {
    /* main backpack */
    let mut backpack = create_backpack("PACKPANTHR".to_string());
    backpack.add("Boots".to_string(), 1);
-   backpack.print_bag();
 
    /* main spell_bag */
    let mut spell_bag = create_spellpack("SPELLZ".to_string());
-   let mut pot : Spell = Spell::create_spell("known for its 'snail-like' ability".to_string());
-   spell_bag.add("turbo".to_string(), pot);
+   let mut pot : Spell = Spell::create_spell("turbo".to_string(),
+    "known for its 'snail-like' ability. this potion is free, but requires a 50 health reduction to craft.".to_string(),
+    0, 0);
+   let mut z4 : Spell = Spell::create_spell("z4".to_string(),
+    "known to cause extreme levels of chill".to_string(), 0, 2);
+   spell_bag.add(pot, 1);
+   spell_bag.add(z4, 2);
 
 
    println!("\nHi {} Welcome to backpacking!\n", user.get_name());
-   println!("You have been equipped with a basic set of boots to get started on your journey! Good luck!\n");
+   println!("You have been equipped with a basic set of boots, a turbo potion, and two z4 potions to get started on your journey! Good luck!\n");
 
    /* Program */
    'main_program: loop {

@@ -13,10 +13,11 @@ pub mod backpack {
         item_count: i32,
     }
 
+    #[derive(Clone, Debug)]
     pub struct SpellPack {
 
         name: String,
-        inventory: HashMap<String, Spell>,
+        inventory: HashMap<Spell, i32>,
         capacity: i32,
         item_count: i32,
     }
@@ -35,9 +36,9 @@ pub mod backpack {
 
     impl SpellPack {
 
-        pub fn add(&mut self, key: String, pot: Spell) {
+        pub fn add(&mut self, key: Spell, val: i32) {
 
-            self.inventory.insert(key, pot);
+            self.inventory.insert(key, val);
         }
 
         pub fn print_bag(&self) {

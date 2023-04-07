@@ -9,6 +9,7 @@ pub mod user_construction {
 
     pub name: String,
     pub coins: i32, 
+    pub level: i32,
     }
 
     impl User {
@@ -43,6 +44,7 @@ pub mod user_construction {
         let player = User {
         name: traveler,
         coins: 0,
+        level: 0,
         };
 
         player
