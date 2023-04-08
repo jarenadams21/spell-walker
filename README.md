@@ -14,9 +14,14 @@
         [ ] Updates/increasing count  
         [ ] Conveniency functionality (getters,setters,etc.)
         [ ] Finish Craft a Spell view
-        [ ] Finish Monster Park (with some help from liberation::main...)
+            User-definable rules, what has changed, cleaner inventory showcase
+        [ ] Finish Monster Park (with some help from liberation::main...
+    
   
   2. Combine metrics, view eqiupment, etc. into one "view yourself"
+
+## Crates & Sources Used
+  1. Loading unicode generation: https://changaco.oy.lc/unicode-progress-bars/
 
 ## Instructions
   i. cargo build

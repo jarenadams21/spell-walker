@@ -87,7 +87,7 @@ pub mod spell_views {
  
         'await_valid_action : loop {
 
-        println!("Type in the name of the spell you'd like to CRAFT (plz be exact): ");
+        println!("\nType in the name of the spell you'd like to CRAFT (plz be exact): ");
         io::stdin()
         .read_line(&mut selection)
         .expect("failed to parse selection...");  
@@ -98,10 +98,18 @@ pub mod spell_views {
         Err(_) => continue,
         };
 
+
         for spell in &EXISTING_SPELLS {
             if (spell.name.eq(&selection)) {
                 pack.update_spell_count(spell.clone(), 2);
-                println!("Crafted!");
+                println!("\nManifesting...\n");
+                println!("------------------");
+                println!("▰▰▱▱▱▱▱▱ 25%");
+                println!("▰▰▰▰▱▱▱▱ 50%");
+                println!("▰▰▰▰▰▰▱▱ 75%");
+                println!("❂❂❂❂❂❂❂❂ wizardly activities complete");
+                println!("------------------");
+                println!("\nCrafted!");
                 pack.print_bag();
                 break 'await_valid_action;
             }
