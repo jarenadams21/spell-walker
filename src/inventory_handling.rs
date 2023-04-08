@@ -55,18 +55,25 @@ pub mod backpack {
 
             let name = key.name.clone();
             self.inventory.insert(key, val);
-            self.clear_duplicates(name, val);
+            self.inventory = self.clear_duplicates(name, val);
         }
 
         // Removes all duplicate spell storages
         // that do not match the specified count
-        pub fn clear_duplicates(&mut self, name: String, rule: i32) {
+        pub fn clear_duplicates(&mut self, name: String, rule: i32) -> HashMap<Spell, i32> {
+
+            let mut inventory_squared = HashMap::new();
 
             for (key, value) in &self.inventory {
-                if(value.eq(&rule) && key.name.eq(&name)) {
+                if(key.name.eq(&name) && !(value.eq(&rule))) {
                     println!("Rule detected...");
                 }
+                else {
+                    
+                    inventory_squared.insert(key.clone(), *value);
+                }
             }
+            inventory_squared
         }
 
     }
