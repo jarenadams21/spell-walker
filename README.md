@@ -29,4 +29,4 @@
 ### Tracking Progress
 
 * Craft a Spell View
-  (User-definable rules, what has changed, cleaner inventory showcase)
+    - (User-definable rules, what has changed, cleaner inventory showcase)
