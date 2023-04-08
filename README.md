@@ -30,3 +30,6 @@
 
 * Craft a Spell View
     - (User-definable rules, what has changed, cleaner inventory showcase)
+    - User should define how many they would like to make, and internal proccesses will validate the request. If the user can't make as much as request, the next closest possible amount to craft is presented as an option
+    - Clearer UI for update inventory (what has changed, maybe an original vs now hashmap view)
+    - Actually process costs/health deductions
