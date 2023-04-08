@@ -14,6 +14,7 @@
         [ ] Updates/increasing count  
         [ ] Conveniency functionality (getters,setters,etc.)
         [ ] Finish Craft a Spell view
+        [ ] Finish Monster Park (with some help from liberation::main...)
   
   2. Combine metrics, view eqiupment, etc. into one "view yourself"
 

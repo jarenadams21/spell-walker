@@ -18,6 +18,10 @@ pub fn spell_workbench(pack: &SpellPack) {
     spell_views::print_craftable_spells(pack);
 }
 
+pub fn craft_a_spell(pack: &SpellPack) {
+    spell_views::prompt_user_spell_creation(pack);
+}
+
 /* User Related */
 pub fn create_wizard() -> User {
     user_construction::create_user()

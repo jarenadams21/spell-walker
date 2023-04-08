@@ -3,6 +3,7 @@ use app::spell_workbench;
 use app::create_wizard;
 use app::create_backpack;
 use app::create_spellpack;
+use app::craft_a_spell;
 use app::spell_handling::spell_views::Spell;
 
 
@@ -62,6 +63,7 @@ fn main() {
             2 => {
 
                 spell_workbench(&spell_bag);
+                craft_a_spell();
             },
             _ => {
                 ();

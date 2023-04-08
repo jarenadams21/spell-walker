@@ -32,6 +32,7 @@ pub mod backpack {
         pub fn print_bag(&self) {
             println!("{:?}", self.inventory);
         }
+
     }
 
     impl SpellPack {
@@ -42,7 +43,17 @@ pub mod backpack {
         }
 
         pub fn print_bag(&self) {
-            println!("{:?}", self.inventory);
+
+            for (key, value) in &self.inventory {
+                println!("[ {:?} ] {:?}", value, key.name)
+            }
+
+        }
+
+        // Implement error handling/checking of revision
+        pub fn contents(&self) -> &HashMap<Spell, i32> {
+
+            &self.inventory
         }
 
     }
