@@ -66,7 +66,7 @@ pub mod backpack {
 
             for (key, value) in &self.inventory {
                 if(key.name.eq(&name) && !(value.eq(&rule))) {
-                    println!("Rule detected...");
+                    println!("Rule(s) detected...");
                 }
                 else {
                     

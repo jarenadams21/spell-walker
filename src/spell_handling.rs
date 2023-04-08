@@ -102,7 +102,7 @@ pub mod spell_views {
         for spell in &EXISTING_SPELLS {
             if (spell.name.eq(&selection)) {
                 pack.update_spell_count(spell.clone(), 2);
-                println!("\nManifesting...\n");
+                println!("\nManifesting...");
                 println!("------------------");
                 println!("▰▰▱▱▱▱▱▱ 25%");
                 println!("▰▰▰▰▱▱▱▱ 50%");

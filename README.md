@@ -14,7 +14,6 @@
         [ ] Updates/increasing count  
         [ ] Conveniency functionality (getters,setters,etc.)
         [ ] Finish Craft a Spell view
-            User-definable rules, what has changed, cleaner inventory showcase
         [ ] Finish Monster Park (with some help from liberation::main...
     
   
@@ -26,3 +25,8 @@
 ## Instructions
   i. cargo build
   ii. cargo run
+
+### Tracking Progress
+
+* Craft a Spell View
+  (User-definable rules, what has changed, cleaner inventory showcase)
