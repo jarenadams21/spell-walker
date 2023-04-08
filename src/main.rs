@@ -63,14 +63,18 @@ fn main() {
             2 => {
 
                 spell_workbench(&spell_bag);
-                craft_a_spell();
+                craft_a_spell(&mut spell_bag);
+                break;
             },
             _ => {
                 ();
+                continue;
             }
        }
 
+       println!("Main Over!");
        break;
+       
 
    }
 }

@@ -77,7 +77,7 @@ pub mod spell_views {
     // If the user opts to craft their own new spell,
     // that is handled and added to the universal list
     // of spells that are now craftable (EXISTING_SPELLS).
-    pub fn prompt_user_spell_creation(pack: &SpellPack) {
+    pub fn prompt_user_spell_creation(pack: &mut SpellPack) {
 
         /* Last user action */
         let mut selection = String::new();
@@ -100,10 +100,9 @@ pub mod spell_views {
 
         for spell in &EXISTING_SPELLS {
             if (spell.name.eq(&selection)) {
-
-                let spell_count = pack.contents().entry(&selection).or_insert(0);
-                *spell_count += 1;
+                pack.update_spell_count(spell.clone(), 2);
                 println!("Crafted!");
+                pack.print_bag();
                 break 'await_valid_action;
             }
         }

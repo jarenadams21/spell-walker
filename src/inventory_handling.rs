@@ -51,9 +51,22 @@ pub mod backpack {
         }
 
         // Implement error handling/checking of revision
-        pub fn contents(&self) -> &HashMap<Spell, i32> {
+        pub fn update_spell_count(&mut self, key: Spell, val: i32) {
 
-            &self.inventory
+            let name = key.name.clone();
+            self.inventory.insert(key, val);
+            self.clear_duplicates(name, val);
+        }
+
+        // Removes all duplicate spell storages
+        // that do not match the specified count
+        pub fn clear_duplicates(&mut self, name: String, rule: i32) {
+
+            for (key, value) in &self.inventory {
+                if(value.eq(&rule) && key.name.eq(&name)) {
+                    println!("Rule detected...");
+                }
+            }
         }
 
     }

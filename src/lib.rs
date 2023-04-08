@@ -18,7 +18,7 @@ pub fn spell_workbench(pack: &SpellPack) {
     spell_views::print_craftable_spells(pack);
 }
 
-pub fn craft_a_spell(pack: &SpellPack) {
+pub fn craft_a_spell(pack: &mut SpellPack) {
     spell_views::prompt_user_spell_creation(pack);
 }
 
