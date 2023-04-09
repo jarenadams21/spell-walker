@@ -82,6 +82,9 @@ pub mod spell_views {
         /* Last user action */
         let mut selection = String::new();
 
+        /* spell_count to craft */
+        let mut bundle = String::new();
+
         /* Existing Spells */
         let mut EXISTING_SPELLS : Vec<Spell> = provide_vector_of_existing_spells();
  
@@ -98,10 +101,25 @@ pub mod spell_views {
         Err(_) => continue,
         };
 
+        // Prompt the user to select how many of the spell to craft
+        // Should give them a secondary popup confirming the amount
+        // they are able to make (which may be less than the increase they wanted
+        // due to material/level constraints)
+        println!("And how many would you like to craft?");
+        io::stdin()
+        .read_line(&mut bundle)
+        .expect("failed to parse selection...");
+ 
+        /* User selects action */
+        let bundle: i32 = match bundle.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
 
         for spell in &EXISTING_SPELLS {
             if (spell.name.eq(&selection)) {
-                pack.update_spell_count(spell.clone(), 2);
+                pack.update_spell_count(spell.clone(), bundle);
                 println!("\nManifesting...");
                 println!("------------------");
                 println!("▰▰▱▱▱▱▱▱ 25%");

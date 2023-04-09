@@ -16,6 +16,7 @@
         [ ] Finish Craft a Spell view
         [ ] Finish Monster Park (with some help from liberation::main...
         [ ] Design Spell framework
+        [ ] Add timers to unicode screens like loading instead of spitting out all progress bars at once
     
   
   2. Combine metrics, view eqiupment, etc. into one "view yourself"
