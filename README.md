@@ -3,11 +3,14 @@
   Chapter 8 benchmark project for Rust documentation learning. Want to test my grasp on collections, structs, module organization among others
 
 ## Todo
-  1. Inventory / Backpack transactions
-    
-      FIRST: Code Organization, 
-      SECOND: FIX SpellPack Hashmap and Spell struct to store names in Spells and map Spells to i32 values, 
-      THEN: Fix the code that does not work
+
+* [ ] Add EXISTING_SPELLS to a user object, mark as learned spells and will handle external crafting transactions instead of an external entity
+
+* [ ] Check for validity of crafting, with associated popups/user entries
+
+* [ ] Start Spell Garage
+
+General Inventory / Backpack transactions
     
         [ X ] Insertions
         [ ] Deletions
