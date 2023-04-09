@@ -54,25 +54,29 @@ pub mod backpack {
         pub fn update_spell_count(&mut self, key: Spell, val: i32) {
 
             let name = key.name.clone();
-            self.inventory.insert(key, val);
-            self.inventory = self.clear_duplicates(name, val);
+            let key_clone = key.clone();
+            self.inventory = self.clear_duplicates(name, val, key_clone);
         }
 
         // Removes all duplicate spell storages
         // that do not match the specified count
-        pub fn clear_duplicates(&mut self, name: String, rule: i32) -> HashMap<Spell, i32> {
+        pub fn clear_duplicates(&mut self, name: String, rule: i32, key_clone: Spell) -> HashMap<Spell, i32> {
 
             let mut inventory_squared = HashMap::new();
+            let mut running_count : i32 = 0;
 
             for (key, value) in &self.inventory {
-                if(key.name.eq(&name) && !(value.eq(&rule))) {
+                if(key.name.eq(&name)) {
+                    running_count += value;
                     println!("Rule(s) detected...");
                 }
                 else {
-                    
                     inventory_squared.insert(key.clone(), *value);
+                    
                 }
             }
+
+            inventory_squared.insert(key_clone.clone(), running_count + rule);
             inventory_squared
         }
 
