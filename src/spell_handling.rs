@@ -79,16 +79,20 @@ pub mod spell_views {
     // of spells that are now craftable (EXISTING_SPELLS).
     pub fn prompt_user_spell_creation(pack: &mut SpellPack) {
 
+ 
+        'await_valid_action : loop {
+
         /* Last user action */
         let mut selection = String::new();
 
         /* spell_count to craft */
         let mut bundle = String::new();
 
+        /* navigates users to spell garage */
+        let mut choice = String::new();
+
         /* Existing Spells */
         let mut EXISTING_SPELLS : Vec<Spell> = provide_vector_of_existing_spells();
- 
-        'await_valid_action : loop {
 
         println!("\nType in the name of the spell you'd like to CRAFT (plz be exact): ");
         io::stdin()
@@ -96,7 +100,7 @@ pub mod spell_views {
         .expect("failed to parse selection...");  
         
         /* User selects action */
-       let selection: String = match selection.trim().parse() {
+       let mut selection: String = match selection.trim().parse() {
         Ok(spell_name) => spell_name,
         Err(_) => continue,
         };
@@ -134,6 +138,25 @@ pub mod spell_views {
         }
 
         println!("non-existent brother try another, or... (Press 1 to find out, Press 0 to try again)");
+        io::stdin()
+        .read_line(&mut choice)
+        .expect("failed to parse selection..."); 
+
+        /* User selects action */
+       let choice: u32 = match choice.trim().parse() {
+        Ok(choice_val) => choice_val,
+        Err(_) => continue,
+        };
+
+        match choice {
+
+            0 => continue,
+
+            1 => println!("Spell Garage!"),
+
+            _ => (),
+        }
+
         break 'await_valid_action;
         
 

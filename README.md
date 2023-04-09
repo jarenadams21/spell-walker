@@ -17,6 +17,7 @@
         [ ] Finish Monster Park (with some help from liberation::main...
         [ ] Design Spell framework
         [ ] Add timers to unicode screens like loading instead of spitting out all progress bars at once
+        [ ] Friends/create new user functionality to switch between smurfs/main or switch with someone else in the same session
     
   
   2. Combine metrics, view eqiupment, etc. into one "view yourself"

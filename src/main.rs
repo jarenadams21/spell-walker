@@ -11,9 +11,6 @@ fn main() {
 
    let user = create_wizard();
 
-   /* Last user action */
-   let mut selection = String::new();
-
    /* main backpack */
    let mut backpack = create_backpack("PACKPANTHR".to_string());
    backpack.add("Boots".to_string(), 1);
@@ -34,6 +31,9 @@ fn main() {
 
    /* Program */
    'main_program: loop {
+
+       /* Last user action */
+        let mut selection = String::new();
 
         /* Landing Page UI */
        println!("What would you like to do?");
@@ -64,7 +64,7 @@ fn main() {
 
                 spell_workbench(&spell_bag);
                 craft_a_spell(&mut spell_bag);
-                break;
+                continue;
             },
             _ => {
                 ();
